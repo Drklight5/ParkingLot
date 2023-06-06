@@ -11,11 +11,11 @@ class CustomerParkingCard : public ParkingCard{
     private:
 
     public:
-    CustomerParkingCard();
-    CustomerParkingCard(int cardId, string personName);
+        CustomerParkingCard();
+        CustomerParkingCard(int cardId, string personName);
 
-    int calculateHoursToPay(Time, Time)
-    void print();
+        int calculateHoursToPay(Time, Time);
+        void print();
 };
 
 #endif 

@@ -7,19 +7,22 @@ using namespace std;
 class Time{
 
     private:
-    int hour, minute;
+        int hour, minute;
 
     public:
-    Time();
-    Time(int hour, int minute);
+        Time();
+        Time(int hour, int minute);
 
-    int getHour(){return hour;}
-    int getMinute(){return minute;}
-    //int elapsedTime(Time);
+        //Getters and setters
+        int getHour(){return hour;}
+        void setHour(int h){hour = h;}
+        
+        int getMinute(){return minute;}
+        void setMinute(int m){minute = m;}
 
-    void setHour(int h){hour = h;}
-    void setMinute(int m){minute = m;}
-    void print();
+        //Methods
+        int elapsedTime(Time);
+        void print();
     
 };
 
