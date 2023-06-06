@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 using namespace std;
+#include "Time.h"
 
 class ParkingCard{
     protected:
@@ -11,10 +12,21 @@ class ParkingCard{
         string personName;
     public:
 
+        //Constructor
         ParkingCard();
         ParkingCard(int, string);
 
-        int getCard();
-        void setCard(int);
+        //Getters and setters    
+        int getCardId();
+        void setCardId(int);
+
+        string getPersonName();
+        void setPersonName(string);
+
+        //Methods
+        double calculatePayment(Time, Time, double);
+        
+        virtual int calculateHoursToPay(Time, Time) = 0;
+        virtual void print() = 0;
 };
 #endif
