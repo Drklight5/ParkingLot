@@ -19,7 +19,7 @@ class CustomerParkingCard : public ParkingCard{
 };
 
 CustomerParkingCard::CustomerParkingCard():ParkingCard(){
-    //TODO
+    
 }
 
 CustomerParkingCard::CustomerParkingCard(int id, string name):ParkingCard(id,name){

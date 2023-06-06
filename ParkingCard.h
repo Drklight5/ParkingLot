@@ -33,11 +33,14 @@ class ParkingCard{
 
 
 ParkingCard::ParkingCard(){
-    //TODO
+    cardId = 123;
+    personName = "Ernesto"
+
 }
 
 ParkingCard::ParkingCard(int id, string name){
-    //TODO
+    cardId = id;
+    personName = name;
 }
 
 double ParkingCard::calculatePayment(Time start, Time end, double fee){
