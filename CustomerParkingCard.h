@@ -28,8 +28,7 @@ CustomerParkingCard::CustomerParkingCard(int id, string name):ParkingCard(id,nam
 int CustomerParkingCard::calculateHoursToPay(Time start, Time end){
     //TODO
     int hours = start.elapsedTime(end);
-
-    return 0;
+    return hours;
 }
 
 void CustomerParkingCard::print(){
