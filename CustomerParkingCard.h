@@ -12,10 +12,26 @@ class CustomerParkingCard : public ParkingCard{
 
     public:
         CustomerParkingCard();
-        CustomerParkingCard(int cardId, string personName);
+        CustomerParkingCard(int id, string name);
 
         int calculateHoursToPay(Time, Time);
         void print();
 };
 
+CustomerParkingCard::CustomerParkingCard(){
+    //TODO
+}
+
+CustomerParkingCard::CustomerParkingCard(int id, string name){
+    //TODO
+}
+
+int CustomerParkingCard::calculateHoursToPay(Time start, Time end){
+    //TODO
+    return 0;
+}
+
+void CustomerParkingCard::print(){
+    //TODO
+}
 #endif 
