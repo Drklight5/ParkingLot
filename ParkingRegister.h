@@ -15,7 +15,7 @@ class ParkingRegister{
 
     public:
         ParkingRegister(); 
-        ParkingRegister(int, Time);
+        ParkingRegister(int id, Time time);
 
         //Getters and setters
 
@@ -32,14 +32,16 @@ class ParkingRegister{
 };
 
 ParkingRegister::ParkingRegister(){
-    //TODO
+    cardId = 123;
+    //entryTime = 
 }
 
 ParkingRegister::ParkingRegister(int id, Time time){
-    //TODO
+    cardId = id;
+    entryTime = time;
 }
 
 void ParkingRegister::print(){
-    //TODO
+    cout << "La cardID es: " << cardID << "entro a las: " << entryTime << endl; 
 }
 #endif
