@@ -36,14 +36,17 @@ Time::Time(int hour, int minute){
 }
 
 int Time::elapsedTime(Time time){
+    //TODO
     return 0;
 }
 
 bool Time::operator>(Time time){
+    //TODO
     return false;
 }
 
 void Time::print(){
+    //TODO
 }
 
 
