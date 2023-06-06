@@ -16,7 +16,8 @@ int main(){
     parkings[1] = new EmployeeParkingCard();
     parkings[2] = new SupplierParkingCard();
     
-    Time time = Time();
+    Time time = Time(12, 30);
+    Time time2 = Time(19,50);
     ParkingRegister regis = ParkingRegister();
 
 
@@ -28,6 +29,8 @@ int main(){
 
     time.print();
     regis.print();
+
+    cout << time.elapsedTime(time2);
 
     return 0;
 };
