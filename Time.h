@@ -11,7 +11,7 @@ class Time{
 
     public:
         Time();
-        Time(int hour, int minute);
+        Time(int h, int m);
 
         //Getters and setters
         int getHour(){return hour;}
