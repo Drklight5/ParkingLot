@@ -33,4 +33,13 @@ EmployeeParkingCard::EmployeeParkingCard(int id, string name, string store):Park
     // Por hacer 
 
 }
+
+int EmployeeParkingCard::calculateHoursToPay(Time, Time){
+    // Por hacer, este metodo es para calcular las horas a pagar, la definicion completa se hara despues
+    return 0;
+}
+
+void EmployeeParkingCard::print(){
+    // Por hacer, aqui ira el metodo de impresion, su definicion completa se hara despues
+}
 #endif
