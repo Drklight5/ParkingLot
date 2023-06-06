@@ -8,16 +8,17 @@ using namespace std;
 #include "ParkingCard.h"
 
 class SupplierParkingCard : public ParkingCard {
-    private:
+private:
     string company;
     
-    public:
+public:
+
     SupplierParkingCard();
     SupplierParkingCard(int id, string name, string com);
 
     string getCompany(){return company;}
-
     void setCompany(string com){company = com;}
+
     int calculateHoursToPay(Time, Time);
     void print();
 };
