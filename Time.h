@@ -65,7 +65,7 @@ int Time::elapsedTime(Time time){
     }
 
     result = (m2 - m1) / 60; 
-    return int(result);
+    return result;
 }
 
 bool Time::operator >(Time time){
