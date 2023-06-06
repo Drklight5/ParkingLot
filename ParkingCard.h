@@ -32,4 +32,18 @@ class ParkingCard{
 };
 
 
+ParkingCard::ParkingCard(){
+    //TODO
+}
+
+ParkingCard::ParkingCard(int id, string name){
+    //TODO
+}
+
+double ParkingCard::calculatePayment(Time start, Time end, double fee){
+    //TODO
+    return 0;
+}
+
+
 #endif
