@@ -14,14 +14,14 @@ class ParkingCard{
 
         //Constructor
         ParkingCard();
-        ParkingCard(int, string);
+        ParkingCard(int cardId, string personName);
 
         //Getters and setters    
-        int getCardId();
-        void setCardId(int);
+        int getCardId(){return cardId;}
+        void setCardId(int Id){cardId = Id;}
 
-        string getPersonName();
-        void setPersonName(string);
+        string getPersonName(){return personName;}
+        void setPersonName(string name){personName = name;}
 
         //Methods
         double calculatePayment(Time, Time, double);
