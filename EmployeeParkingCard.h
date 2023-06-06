@@ -28,7 +28,7 @@ EmployeeParkingCard::EmployeeParkingCard():ParkingCard(){
 
 }
 
-EmployeeParkingCard::EmployeeParkingCard(int id, string name, string store):ParkingCard(){
+EmployeeParkingCard::EmployeeParkingCard(int id, string name, string store):ParkingCard(id, name){
 
     // Por hacer 
 
