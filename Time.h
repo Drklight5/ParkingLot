@@ -31,7 +31,7 @@ Time::Time(){
     /*TODO*/
 }
 
-Time::Time(int hour, int minute){
+Time::Time(int h, int m){
     /*TODO*/
 }
 
