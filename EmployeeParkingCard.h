@@ -13,7 +13,7 @@ class EmployeeParkingCard : public ParkingCard{
 
     public:
     EmployeeParkingCard();
-    EmployeeParkingCard(int cardId, string personName, string storeName);
+    EmployeeParkingCard(int id, string name, string store);
 
     string getStoreName(){return storeName;}
 
@@ -22,4 +22,15 @@ class EmployeeParkingCard : public ParkingCard{
     void print();
 };
 
+EmployeeParkingCard::EmployeeParkingCard():ParkingCard(){
+
+    // Por hacer 
+
+}
+
+EmployeeParkingCard::EmployeeParkingCard(int id, string name, string store):ParkingCard(){
+
+    // Por hacer 
+
+}
 #endif

@@ -14,7 +14,7 @@ class ParkingCard{
 
         //Constructor
         ParkingCard();
-        ParkingCard(int cardId, string personName);
+        ParkingCard(int id, string name);
 
         //Getters and setters    
         int getCardId(){return cardId;}
