@@ -10,11 +10,11 @@ using namespace std;
 
 class ParkingRegister{
     private:
-    int cardId;
-    Time entryTime;
+        int cardId;
+        Time entryTime;
 
     public:
-    ParkingRegister();
+        ParkingRegister(); 
 
 };
 #endif

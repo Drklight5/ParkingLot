@@ -7,11 +7,12 @@ using namespace std;
 #include "Time.h"
 
 class ParkingCard{
+
     protected:
         int cardId;
         string personName;
-    public:
 
+    public:
         //Constructor
         ParkingCard();
         ParkingCard(int id, string name);
@@ -29,4 +30,6 @@ class ParkingCard{
         virtual int calculateHoursToPay(Time, Time) = 0;
         virtual void print() = 0;
 };
+
+
 #endif

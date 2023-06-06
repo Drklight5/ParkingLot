@@ -18,7 +18,7 @@ class SupplierParkingCard : public ParkingCard {
     string getCompany(){return company;}
 
     void setCompany(string com){company = com;}
-    void calculateHoursToPay(Time, Time);
+    int calculateHoursToPay(Time, Time);
     void print();
 };
 

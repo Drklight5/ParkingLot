@@ -9,17 +9,17 @@ using namespace std;
 
 class EmployeeParkingCard : public ParkingCard{
     private:
-    string storeName;
+        string storeName;
 
     public:
     EmployeeParkingCard();
     EmployeeParkingCard(int id, string name, string store);
 
-    string getStoreName(){return storeName;}
+        string getStoreName(){return storeName;}
 
-    void setStoreName(string store){storeName = store;}
-    int calculateHoursToPay(Time, Time);
-    void print();
+        void setStoreName(string store){storeName = store;}
+        int calculateHoursToPay(Time, Time);
+        void print();
 };
 
 EmployeeParkingCard::EmployeeParkingCard():ParkingCard(){
