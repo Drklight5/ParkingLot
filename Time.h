@@ -22,8 +22,29 @@ class Time{
 
         //Methods
         int elapsedTime(Time);
+        bool operator > (Time);
         void print();
     
 };
+
+Time::Time(){
+    /*TODO*/
+}
+
+Time::Time(int hour, int minute){
+    /*TODO*/
+}
+
+int Time::elapsedTime(Time time){
+    return 0;
+}
+
+bool Time::operator>(Time time){
+    return false;
+}
+
+void Time::print(){
+}
+
 
 #endif
