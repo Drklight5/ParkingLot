@@ -19,7 +19,6 @@ class CustomerParkingCard : public ParkingCard{
 };
 
 CustomerParkingCard::CustomerParkingCard():ParkingCard(){
-    
 }
 
 CustomerParkingCard::CustomerParkingCard(int id, string name):ParkingCard(id,name){
@@ -28,10 +27,13 @@ CustomerParkingCard::CustomerParkingCard(int id, string name):ParkingCard(id,nam
 
 int CustomerParkingCard::calculateHoursToPay(Time start, Time end){
     //TODO
+    int hours = start.elapsedTime(end);
+
     return 0;
 }
 
 void CustomerParkingCard::print(){
+    cout << "CardId: \t" << cardId << "Name:\t" << personName << endl;
     //TODO
 }
 #endif 
