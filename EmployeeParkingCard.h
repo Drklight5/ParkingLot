@@ -23,13 +23,13 @@ class EmployeeParkingCard : public ParkingCard{
 };
 
 EmployeeParkingCard::EmployeeParkingCard():ParkingCard(){
-
+    storeName = "";
     // Por hacer 
 
 }
 
 EmployeeParkingCard::EmployeeParkingCard(int id, string name, string store):ParkingCard(id, name){
-
+    storeName = store;
     // Por hacer 
 
 }
@@ -41,5 +41,6 @@ int EmployeeParkingCard::calculateHoursToPay(Time, Time){
 
 void EmployeeParkingCard::print(){
     // Por hacer, aqui ira el metodo de impresion, su definicion completa se hara despues
+    cout << "CardId: " << cardId << " \tName:" << personName << "\tStore:" << storeName <<endl;
 }
 #endif
