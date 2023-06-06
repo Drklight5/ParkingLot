@@ -42,6 +42,8 @@ ParkingRegister::ParkingRegister(int id, Time time){
 }
 
 void ParkingRegister::print(){
-    cout << "La cardID es: " << cardID << "entro a las: " << entryTime << endl; 
+    cout << "La cardID es: " << cardId << "entro a las: ";
+    entryTime.print();
+    cout << endl; 
 }
 #endif
