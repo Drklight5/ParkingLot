@@ -15,6 +15,31 @@ class ParkingRegister{
 
     public:
         ParkingRegister(); 
+        ParkingRegister(int, Time);
+
+        //Getters and setters
+
+        int getCardId() {return cardId;}
+        void setCardId(int id) {cardId = id;}
+
+        Time getEntryTime(){ return entryTime;}
+        void setEntryTime(Time time) {entryTime = time;}
+
+        //Methods
+
+        void print();
 
 };
+
+ParkingRegister::ParkingRegister(){
+    //TODO
+}
+
+ParkingRegister::ParkingRegister(int id, Time time){
+    //TODO
+}
+
+void ParkingRegister::print(){
+    //TODO
+}
 #endif

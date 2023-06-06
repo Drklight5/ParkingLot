@@ -18,11 +18,11 @@ class CustomerParkingCard : public ParkingCard{
         void print();
 };
 
-CustomerParkingCard::CustomerParkingCard(){
+CustomerParkingCard::CustomerParkingCard():ParkingCard(){
     //TODO
 }
 
-CustomerParkingCard::CustomerParkingCard(int id, string name){
+CustomerParkingCard::CustomerParkingCard(int id, string name):ParkingCard(id,name){
     //TODO
 }
 
