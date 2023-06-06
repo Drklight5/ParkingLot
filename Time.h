@@ -28,11 +28,13 @@ class Time{
 };
 
 Time::Time(){
-    /*TODO*/
+    hour = 7; 
+    minute = 30;
 }
 
 Time::Time(int h, int m){
-    /*TODO*/
+    hour = h;
+    minute = m;
 }
 
 int Time::elapsedTime(Time time){
@@ -46,7 +48,7 @@ bool Time::operator>(Time time){
 }
 
 void Time::print(){
-    //TODO
+    cout << "Son las: " << hour << ":" << minute<< endl;
 }
 
 
