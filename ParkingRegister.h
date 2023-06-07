@@ -32,8 +32,9 @@ class ParkingRegister{
 };
 
 ParkingRegister::ParkingRegister(){
-    cardId = 0;
-    entryTime = "";
+    cardId = 1;
+    Time time(15,18);
+    entryTime = time;
 }
 
 ParkingRegister::ParkingRegister(int id, Time time){
