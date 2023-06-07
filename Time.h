@@ -65,6 +65,11 @@ int Time::elapsedTime(Time time){
     }
 
     result = (m2 - m1) / 60; 
+
+    if (m2 % m1 != 0){
+        result ++;
+    }
+    
     return result;
 }
 
