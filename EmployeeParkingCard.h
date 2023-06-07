@@ -34,7 +34,7 @@ EmployeeParkingCard::EmployeeParkingCard(int id, string name, string store):Park
 
 }
 
-int EmployeeParkingCard::calculateHoursToPay(Time, Time){
+int EmployeeParkingCard::calculateHoursToPay(Time start, Time end){
     // Por hacer, este metodo es para calcular las horas a pagar, la definicion completa se hara despues
     return 0;
 }
