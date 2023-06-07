@@ -20,15 +20,13 @@ void readFromFile(ParkingCard cards[50], int &numCards ){
 
     while(inputFile >> card) {
         inputFile >> id >> name >> store >> company ;
-        Date date(dd,mm,yy);
         if (card == 'E') {
-            personsList[numberOfPersons] = new Person(name, date);
-            numberOfPersons++;   // count the person added to the array
+            cards[numCards] = new EmployeeParkingCard(id, name, store);
+            numCards++;   // count the person added to the array
         }
-        else {
-            inputFile >> dept;
-            personsList[numberOfPersons] = new Teacher(name, date, dept);
-            numberOfPersons++;   // count the person added to the array
+        else if (card == 'S'){
+            cards[numCards] = new SupplierParkingCard(id, name, company);
+            numCards++;   // count the person added to the array
         }
     }
     inputFile.close();
