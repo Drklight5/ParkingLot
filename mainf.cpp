@@ -41,19 +41,17 @@ void readInfoFromKeyboard(ParkingCard *cards[50], int &numSlots) {
     char cardChoice;
     int id;
     string name, store, company;
-    cout << "Number of Slots ";
-    cin >> numSlots;
-    for (int c = 0; c < numSlots; c++) {
-        cout << "Is the person a Customer? (y/n)" << endl;
-        cin >> cardChoice;
-        if (cardChoice == 'y') {
+    
+    cout << "Is the person a Customer? (y/n)" << endl;
+    cin >> cardChoice;
+    if (cardChoice == 'y') {
             
-        }
-        
-        else {
-            personsList[c] = new Person(name, date);
-        }
     }
+        
+    else {
+        
+    }
+    
 }
 
 int main(){
