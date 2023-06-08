@@ -9,7 +9,7 @@ using namespace std;
 #include "Time.h"
 #include "ParkingRegister.h"
 
-void readFromFile(ParkingCard cards[50], int &numSlots ){
+void readFromFile(ParkingCard *cards[50], int &numSlots ){
     char card;
     int id;
     string name, store, company;
@@ -19,14 +19,16 @@ void readFromFile(ParkingCard cards[50], int &numSlots ){
     numSlots = 0;   
 
     while(inputFile >> card && numSlots <= 20) {
-        inputFile >> id >> name >> store >> company ;
+        inputFile >> id >> name ;
         if (card == 'E') {
+            inputFile >> store;
             cards[numSlots] = new EmployeeParkingCard(id, name, store);
             numSlots++;   
         }
         else if (card == 'S'){
+            inputFile >> company;
             cards[numSlots] = new SupplierParkingCard(id, name, company);
-            numSlots++;   // count the person added to the array
+            numSlots++;   
         }
         else if (card == 'C'){
             cards[numSlots] = new SupplierParkingCard(id, name);
