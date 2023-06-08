@@ -35,7 +35,7 @@ void readFromFile(ParkingCard cards[50], int &numSlots ){
     }
     inputFile.close();
 }
-}
+
 
 void readInfoFromKeyboard(ParkingCard *cards[50], int &numSlots) {
     char cardChoice;
