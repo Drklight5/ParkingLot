@@ -70,7 +70,8 @@ do
         cout << endl;
         cout << "a) Register entrance " << endl;
         cout << "b) Register exit " << endl;
-        cout << "c)  " << endl;
+        cout << "c) Display Parking Lot info " << endl;
+        cout << "d) Display Parking Cards info"
         cout << "option -> " << endl;
         cin >> menuOption;
         switch (menuOption) {
@@ -78,6 +79,12 @@ do
                 
             }
             case 'b':  {
+                
+            }
+            case 'c':  {
+                
+            }
+            case 'd':  {
                 
             }
         }
