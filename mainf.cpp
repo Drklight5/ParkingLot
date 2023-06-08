@@ -16,7 +16,7 @@ void readFromFile(ParkingCard cards[50], int &numSlots ){
     ifstream inputFile;
 
     inputFile.open("Parkingcards.txt");
-    numCards = 0;   
+    numSlots = 0;   
 
     while(inputFile >> card && numSlots <= 20) {
         inputFile >> id >> name >> store >> company ;
@@ -47,10 +47,7 @@ void readInfoFromKeyboard(ParkingCard *cards[50], int &numSlots) {
         cout << "Is the person a Customer? (y/n)" << endl;
         cin >> cardChoice;
         if (cardChoice == 'y') {
-            cout << "Department? ";
-            cin >> depart;
-            Teacher *teach = new Teacher(name, date, depart);
-            personsList[c] = teach;
+            
         }
         
         else {
