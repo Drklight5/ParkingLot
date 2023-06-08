@@ -63,7 +63,26 @@ int main(){
     ParkingCard *cards[50]
     int numCards;
     char menuOption; 
-    int arrive, exit;
-
+    int arrive, exit, hours, minutes;
+do
+    {
+        cout << "Options " << endl;
+        cout << endl;
+        cout << "a) Register entrance " << endl;
+        cout << "b) Register exit " << endl;
+        cout << "c)  " << endl;
+        cout << "option -> " << endl;
+        cin >> menuOption;
+        switch (menuOption) {
+            case 'a':  {
+                
+            }
+            case 'b':  {
+                
+            }
+        }
+    } while ((hours <= 22 && hours >= 8 ) && (minutes <= 59 && minutes >= 0));  // c is the option to finish
+    return 0;
+}
 
 }
