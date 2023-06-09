@@ -106,12 +106,12 @@ do
             break;
             
             case 'b':  {
-                cout << "Ingresa el id"
+                cout << "Ingresa el id";
                 cin >> id;
                 for(int g = 0; g < numreg; g++){
                     if (id == cards[g]->getCardId()){
                         cout << "Continue" << endl;
-                        cout << endl << "Ingrese la hora de salida"
+                        cout << endl << "Ingrese la hora de salida";
                     }
                 }
                 
