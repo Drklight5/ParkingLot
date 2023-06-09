@@ -129,7 +129,29 @@ int main(){
                 // for(int g = 0; g < numreg; g++){
                 //     if (id == cards[g]->getCardId()){
                 //         cout << "Continue" << endl;
-                //         cout << endl << "Ingrese la hora de salida"
+                //         cout << endl << "Ingrese la hora de salida" << endl;
+                //         cin >> hours;
+                //         while (hours > 22 || hours < 8){
+                //             cout << "Hora no valida" << endl; 
+                //             cout << endl << "Ingrese la hora" << endl; 
+                //             cin >> hours;
+                //             cout << endl;
+                //         }
+                //         if (hours <= 22 && hours >= 8){
+                //             cout << endl << "Ingrese los minutos" << endl;
+                //             cin >> minutes;
+                //             while (minutes > 59 || minutes < 0){
+                //                 cout << "Minutos no valido " << endl; 
+                //                 cout << endl;
+                //                 cout << endl << "Ingrese los minutos" << endl;
+                //                 cin >> minutes;
+                //                 }
+                //             }
+                //             Time tiempo2(hours,minutes);
+                //             exit = tiempo2;
+                //             while (arrive < exit ){
+                                
+                //             }
                 //     }
                 // }
                 
