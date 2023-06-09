@@ -35,7 +35,12 @@ SupplierParkingCard::SupplierParkingCard(int id, string name, string com):Parkin
 }
 
 int SupplierParkingCard::calculateHoursToPay(Time start, Time end){
-    int hours = start.elapsedTime(end);
+    int time = start.elapsedTime(end);
+    int hours;
+    if (time % 60 != 0){
+        time += 60;
+    }
+    hours = time / 60;
     // Este return 0 es solamente para que no me marque error la definicion correcta se hara posteriormente 
     return hours - 1;
 }

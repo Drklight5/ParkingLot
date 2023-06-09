@@ -49,10 +49,9 @@ void displayMenu(){
         cout << "t) Finish program" << endl;
         cout << "option -> " << endl;
 }
-ParkingRegister registerArrive(int id){
+
+Time askTime(){
     int hours, minutes;
-    Time arrive;
-    cout << "Adelante " << endl;
     cout << endl << "Ingrese la hora" << endl; 
     cin >> hours;
 
@@ -75,7 +74,15 @@ ParkingRegister registerArrive(int id){
      //   }
 
     Time tiempo (hours, minutes);
-    arrive = tiempo;
+    return tiempo;
+}
+
+ParkingRegister registerArrive(int id){
+    
+    Time arrive;
+    cout << "Adelante " << endl;
+   
+    arrive = askTime();
     ParkingRegister registro(id, arrive);
     
                            
@@ -93,6 +100,7 @@ int main(){
     int  hours, minutes; 
     int numreg = 0;
     Time arrive, exit;
+    double fee = 100;
 
     readFromFile(cards,numSlots);
 
@@ -124,14 +132,31 @@ int main(){
                 break;
             }
             case 'b':  {
-                // cout << "Ingresa el id"
-                // cin >> id;
-                // for(int g = 0; g < numreg; g++){
-                //     if (id == cards[g]->getCardId()){
-                //         cout << "Continue" << endl;
-                //         cout << endl << "Ingrese la hora de salida"
-                //     }
-                // }
+                bool notFound = true;
+
+                do {
+                    cout << "Ingrese el id: " << endl;
+                    cin >> id;
+                    for(int g = 0; g < numreg; g++){
+                        if (id == list[g].getCardId()){
+                            for(int h = 0; h < numSlots; h++ ){
+                                if (list[g].getCardId() == cards[h] -> getCardId()){
+
+                                    exit = askTime();
+                                    double amount = cards[h]->calculatePayment(list[g].getEntryTime(),exit,100);
+                                    cout << "Has salido\t" << endl;
+                                    cout << "Payment: " << amount << endl;  
+                                    notFound = false;
+                                } 
+                            }
+                         }
+                    }
+                    if (notFound){
+                    cout << "Te equivocaste, vuelvelo a intentar " << endl;
+                    cout << endl;}
+                }
+                while(notFound);
+                break;
                 
             }
             case 'c':  {

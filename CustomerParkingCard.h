@@ -27,7 +27,12 @@ CustomerParkingCard::CustomerParkingCard(int id, string name):ParkingCard(id,nam
 
 int CustomerParkingCard::calculateHoursToPay(Time start, Time end){
     //TODO
-    int hours = start.elapsedTime(end);
+    int time = start.elapsedTime(end);
+    int hours;
+    if (time % 60 != 0){
+        time += 60;
+    }
+    hours = time / 60;
     return hours;
 }
 

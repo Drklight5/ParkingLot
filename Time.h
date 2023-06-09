@@ -64,11 +64,7 @@ int Time::elapsedTime(Time time){
         m2 = time.getHour() * 60 + minute;  
     }
 
-    result = (m2 - m1) / 60; 
-
-    if (m2 % m1 != 0){
-        result ++;
-    }
+    result = m2 - m1;
     
     return result;
 }
