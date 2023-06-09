@@ -39,7 +39,53 @@ void readFromFile(ParkingCard *cards[50], int &numSlots ){
 }
 
 
+void displayMenu(){
+    cout << "Options " << endl;
+    cout << endl;
+    cout << "a) Register entrance " << endl;
+    cout << "b) Register exit " << endl;
+        cout << "c) Display Parking Lot info " << endl;
+        cout << "d) Display Parking Cards info" << endl;
+        cout << "t) Finish program" << endl;
+        cout << "option -> " << endl;
+}
+ParkingRegister registerArrive(int id){
+    int hours, minutes;
+    Time arrive;
+    cout << "Adelante " << endl;
+    cout << endl << "Ingrese la hora" << endl; 
+    cin >> hours;
+
+    while (hours > 22 || hours < 8){
+        cout << "Hora no valida" << endl; 
+        cout << endl << "Ingrese la hora" << endl; 
+        cin >> hours;
+        cout << endl;
+    }
+
+                           // if (hours <= 22 && hours >= 8){
+        cout << endl << "Ingrese los minutos" << endl;
+        cin >> minutes;
+        while (minutes > 59 || minutes < 0){
+            cout << "Minutos no valido " << endl; 
+            cout << endl;
+            cout << endl << "Ingrese los minutos" << endl;
+            cin >> minutes;
+            }
+     //   }
+
+    Time tiempo (hours, minutes);
+    arrive = tiempo;
+    ParkingRegister registro(id, arrive);
+    
+                           
+    cout << "Listo, te has registrado" << endl;
+    cout << endl;
+
+    return registro;
+}
 int main(){
+
     ParkingCard *cards[50];
     ParkingRegister list[20];
     int numSlots, id ;
@@ -49,62 +95,34 @@ int main(){
     Time arrive, exit;
 
     readFromFile(cards,numSlots);
-do
+
+    do
     {
-        cout << "Options " << endl;
-        cout << endl;
-        cout << "a) Register entrance " << endl;
-        cout << "b) Register exit " << endl;
-        cout << "c) Display Parking Lot info " << endl;
-        cout << "d) Display Parking Cards info" << endl;
-        cout << "t) Finish program" << endl;
-        cout << "option -> " << endl;
+        displayMenu();
         cin >> menuOption;
         switch (menuOption) {
             case 'a':  {
-                cout << "Ingrese el id: " << endl;
-                cin >> id;
-                for(int g = 0; g < numSlots; g++){
-                    if (id == cards[g]->getCardId())
-                    {   
-                        cout << "Adelante " << endl;
-                        //if (id != cards[g]->getCardId()){
-                            //cout << "Te equivocaste, vuelvelo a intentar " << endl;
-                            //cout << endl;
-                        //}
-                        cout << endl << "Ingrese la hora" << endl; 
-                        cin >> hours;
-                        while (hours > 22 || hours < 8){
-                            cout << "Hora no valida" << endl; 
-                            cout << endl << "Ingrese la hora" << endl; 
-                            cin >> hours;
-                            cout << endl;
-                        }
-                        if (hours <= 22 && hours >= 8){
-                            cout << endl << "Ingrese los minutos" << endl;
-                            cin >> minutes;
-                            while (minutes > 59 || minutes < 0){
-                                cout << "Minutos no valido " << endl; 
-                                cout << endl;
-                                cout << endl << "Ingrese los minutos" << endl;
-                                cin >> minutes;
-                                }
-                            }
-                        Time tiempo (hours, minutes);
-                        arrive = tiempo;
-                        ParkingRegister registro(id, arrive);
-                        list[numreg] = registro;
-                        numreg ++;
-                        cout << "Listo, te has registrado" << endl;
-                        cout << endl;
-                        
-                    }
+                bool notFound = true;
+
+                do {
+                    cout << "Ingrese el id: " << endl;
+                    cin >> id;
                     
+                    for(int g = 0; g < numSlots; g++){
+
+                        if (id == cards[g]->getCardId()){  
+                            list[numreg] = registerArrive(id);
+                            numreg ++;
+                            notFound = false;
+                        }
+                    }
+                    if (notFound){
+                    cout << "Te equivocaste, vuelvelo a intentar " << endl;
+                    cout << endl;}
                 }
-                
+                while(notFound);
+                break;
             }
-            break;
-            
             case 'b':  {
                 // cout << "Ingresa el id"
                 // cin >> id;
